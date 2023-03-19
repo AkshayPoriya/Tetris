@@ -9,7 +9,7 @@ class TetrisController:
     def get_user_input(self):
         while True:
             # Read user input from the command line
-            action = input("Enter action (a=left, d=right, w=rotate, s=drop, space=fall): ").strip()
+            action = input("Enter action (a=left, d=right, w=rotate-clockwise, s=rotate-counter-clockwise, space=fall): ").strip()
             # Validate user input
             if action in ['a', 'd', 'w', 's', '']:
                 return action
