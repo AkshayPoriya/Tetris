@@ -1,0 +1,81 @@
+Problem Statement 
+Implement a simple ‘text-mode’ version of the Tetris game, following the specification below. 
+
+There are 5 different pieces in this version of Tetris:
+
+****
+
+*
+*
+**
+
+ *
+ *
+**
+
+
+ *
+**
+*
+
+
+**
+**
+
+
+and they fall down a 12x12 tetris board (the space between the asterisk characters below):
+
+*            *
+*            *
+*            *
+*            *
+*            *
+*            *
+*            *
+*            *
+*            *
+*            *
+*            *
+*            *
+**************
+
+
+The game starts with a random piece appearing at the top of the board (centered horizontally on the first row). The user is then prompted to make a move:
+ <a> (+<return>): move piece left and move one row down
+ <d> (+<return>): move piece right and move one row down
+ <w> (+<return>): rotate piece counter clockwise and move one row down
+ <s> (+<return>): rotate piece clockwise and move one row down
+ <space>: no action and the piece moves one row down
+
+If the move the user selects is valid, then it is executed and the grid is redrawn and printed again on the screen.
+If the action is not valid, then the user is again prompted to enter a valid move.
+Note that the game state only updates after the user has entered a valid action.
+
+A valid move is defined thus: if the piece, drawn at its new location, is not outside the bounds of the board,
+and does not overlap any pieces that previously fell, then the move is valid. 
+
+If a new piece’s position is such that it allows no valid move, then a new piece appears along the top of the board, 
+randomly positioned along the x-axis (i.e. not in the center of the first row). 
+
+If this new piece offers no valid move, then the game is over and the program exits.
+
+
+Evaluation
+A full, bug-free implementation of the spec is mandatory for any evaluation.
+
+Other than that, in no particular order of importance, we are interested in:
+1. Unit tests for the valid, invalid and edge cases
+2. The use of OOP and design patterns to make future extensions easier
+3. Commit history showing the code evolution
+4. The elegance of the code
+
+
+Notes:
+1. We prefer solutions in Python as this is the team’s primary programming language.
+2. Please focus on the game logic rather than the interface. So a GUI or TUI is not needed. In the text-mode interface, 
+   the grid and a message asking for a new input are simply printed on console (or stdout) after every valid move. 
+   For every invalid move, simply print the error message asking for a different input to the console (or stderr). 
+3. Please don’t go beyond the specification or add any features not explicitly requested. If you feel some part of this spec is unclear or contradictory in some detail, please resolve it using your best judgment, and make a note explaining your decision.
+4. It is not mandatory to implement all the evaluation criterias. 
+   We’re interested in knowing what’s important for you to write good quality code.
+
