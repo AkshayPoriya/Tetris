@@ -6,3 +6,6 @@ conda activate tetris
 
 # Install python dependencies
 pip install -r requirements.txt
+
+# Play Game
+python Tetris.py
